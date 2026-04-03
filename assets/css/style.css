@@ -89,16 +89,15 @@ section:nth-child(2){
 ul{
   margin: 0 auto;
   display: flex;
-  justify-content: space-around;
-  align-items: center;
+  justify-content: center;
   gap:20px;
-  width:50%;
+  width:880px;
   list-style: none;
+  padding:2em;
 }
 
 li{
-  width:30%;
-  height: 80%;
+  width:31%;
 }
 
 .card img{
@@ -152,6 +151,10 @@ section:last-of-type{
   ul {
     flex-direction: column;
     width: 90%;
+  }
+
+  li{
+    width:100%;
   }
 
   section:first-of-type .block-content-text {
