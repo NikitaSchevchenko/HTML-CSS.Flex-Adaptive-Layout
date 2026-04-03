@@ -1,0 +1,178 @@
+*{
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  font-family: Arial, Helvetica, sans-serif;
+  background: #333;
+  color: #fff;
+  line-height: 1.5;
+  font-size: 1.1em;
+  text-align: center;
+}
+
+header,section:nth-child(2n+1),.card,footer{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+header{
+  position: relative;
+  height: 450px;
+  background:url("../images/bg.png");
+  background-position: center;
+  background-size: cover;
+}
+
+header::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.3); 
+  z-index: 1;
+}
+
+header>*{
+  z-index: 2;
+  position: relative;
+}
+
+header .btn{
+  display:inline-block;
+  background: #333;
+  color: #fff;
+  text-decoration: none;
+  padding: 1em 2em;
+  border: 1px solid #666;
+  margin-top:1em;
+}
+
+header .btn:hover {
+  background: #eaeaea;
+  color: #333;
+}
+
+header>.block-content>p{
+  padding: 0;
+}
+
+.block-content{
+  width: 50%;
+}
+
+section:first-of-type{
+  background-color: #eaeaea;
+  color: #333;
+}
+
+section:first-of-type .block-content-text{
+  columns: 2;
+  column-gap: 2em;
+}
+
+section:first-of-type .block-content-text>p{
+  padding-top: 0;
+}
+
+p,h2,h3{
+  margin: 0;
+  padding: 1em 0;
+}
+
+section:nth-child(2){
+  padding: 2em 1em 1em;
+}
+
+ul{
+  margin: 0 auto;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  gap:20px;
+  width:50%;
+  list-style: none;
+}
+
+li{
+  width:30%;
+  height: 80%;
+}
+
+.card img{
+  display: block;
+  width: 100%;
+  height:auto;
+}
+
+.card>.card-content{
+  background-color:white;
+  color:#333;
+  padding: 1.5em;
+}
+
+section:last-of-type{
+  color:black;
+  background-color: #fff;
+  padding: 2em;
+}
+
+.contact-about>div,.organization-info>div {
+  width: 50%;
+  padding: 2em;
+}
+
+.contact-about,.organization-info{
+  display:flex;
+  width: 100%;
+}
+
+.contact-about>.contact{
+  background-color: #2690d4;
+}
+
+.organization-info{
+  background-color: black; 
+}
+
+
+
+.organization-info>.author a{
+  color:#2690d4;
+  text-decoration: none;
+}
+
+@media (max-width: 700px) {
+  .block-content {
+    width: 90%;
+  }
+
+  ul {
+    flex-direction: column;
+    width: 90%;
+  }
+
+  section:first-of-type .block-content-text {
+    columns: 1;
+  }
+
+  .contact-about,
+  .organization-info {
+    flex-direction: column;
+  }
+
+  .contact-about > div,
+  .organization-info > div {
+    width: 100%;
+  }
+
+  .organization-info{
+    padding: 2em;
+  }
+
+  .organization-info> div{
+    padding: 0;
+  }
+}
