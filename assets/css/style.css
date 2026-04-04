@@ -13,6 +13,7 @@ body {
 }
 
 header,section:nth-child(2n+1),.card,footer{
+  width: 100%;
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -31,7 +32,7 @@ header::before {
   content: "";
   position: absolute;
   inset: 0;
-  background: rgba(0, 0, 0, 0.3); 
+  background: rgba(0, 0, 0, 0.4);/*тут задаеться прозрачность*/ 
   z-index: 1;
 }
 
@@ -91,7 +92,8 @@ ul{
   display: flex;
   justify-content: center;
   gap:20px;
-  width:880px;
+  /* width:880px; тут как я понял была ошибка.Когда ширина меньше 880 пикселей,этот блок вправо вылезает за ширину экрана*/
+  max-width: 880px;
   list-style: none;
   padding:2em;
 }
