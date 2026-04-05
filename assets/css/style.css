@@ -23,16 +23,16 @@ header,section:nth-child(2n+1),.card,footer{
 header{
   position: relative;
   height: 450px;
-  background:url("../images/bg.png");
-  background-position: center;
-  background-size: cover;
 }
 
 header::before {
+  background:url("../images/bg.png");
+  background-position: center;
+  background-size: cover;
   content: "";
   position: absolute;
   inset: 0;
-  background: rgba(0, 0, 0, 0.4);/*тут задаеться прозрачность*/ 
+  opacity: 0.4; 
   z-index: 1;
 }
 
